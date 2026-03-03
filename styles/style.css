@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: Avenir LT Std; */
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  MAIN SECTION  */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 357px;
+  height: 40px;
+}
+
+/* LEFT SIDE */
+.left {
+  flex: 1;
+  padding-left: 135px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.left-content {
+  flex: 1; /* takes remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* now it can center */
+}
+.left h1 {
+  font-weight: 750;
+  font-style: 95 Black;
+  font-size: 48px;
+  line-height: 100%;
+  margin-bottom: 12px;
+}
+
+.left p {
+  font-weight: 600;
+
+  font-size: 20px;
+  line-height: 100%;
+  margin-bottom: 60px;
+}
+
+.buttons {
+  max-width: 495px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  width: 230px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #fa4b00;
+  background: transparent;
+  color: #fa4b00;
+
+  font-weight: 750;
+
+  font-size: 16px;
+
+  line-height: 100%;
+}
+
+.buttons button:hover {
+  background: #fa4b00;
+  color: #fff;
+}
+
+/* RIGHT SIDE */
+.right {
+  padding-inline: 35px;
+  padding-top: 246px;
+  padding-bottom: calc(246px - 60px);
+  background: #f1eee8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right img {
+  width: 531px;
+  height: auto;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #f26522;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
