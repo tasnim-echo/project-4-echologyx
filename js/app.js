@@ -195,3 +195,81 @@ const fullstack = [
     question: "Do you have knowledge about Python?",
   },
 ];
+
+console.log(frontend[0].logo);
+
+const homeView = document.getElementById("homeView");
+const skillView = document.getElementById("skillView");
+
+// ELEMENTS
+const logo = document.getElementById("skill-logo");
+
+console.log(logo);
+const title = document.getElementById("skillTitle");
+const desc = document.getElementById("skillDesc");
+const question = document.getElementById("skillQuestion");
+
+const progressLabel = document.getElementById("progressLabel");
+const progress = document.querySelector(".progress-fill");
+
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+
+// stack buttons
+const stackButtons = document.querySelectorAll(
+  "#homeView .left-content .buttons button",
+);
+
+let skills = [];
+let index = 0;
+
+stackButtons.forEach((stackBtn) => {
+  //   console.log(stackBtn);
+  stackBtn.addEventListener("click", function () {
+    console.log(stackBtn.textContent);
+    if (stackBtn.textContent === "Front-end development") {
+      skills = frontend;
+      progressLabel.textContent = "Front-end Development";
+    }
+    if (stackBtn.textContent === "Back-end development") {
+      skills = backend;
+      progressLabel.textContent = "Back-end Development";
+    }
+    if (stackBtn.textContent === "Full stack development") {
+      skills = fullstack;
+      progressLabel.textContent = "Full Stack Development";
+    }
+
+    index = 0;
+
+    homeView.style.display = "none";
+    skillView.style.display = "block";
+
+    loadSkill();
+  });
+});
+
+loadSkill = () => {
+  const skill = skills[index];
+
+  logo.src = skill.logo;
+  logo.alt = skill.title;
+  title.textContent = skill.title;
+  desc.textContent = skill.desc;
+  question.textContent = skill.question;
+
+  const percent = ((index + 1) / skills.length) * 100;
+  progress.style.width = percent + "%";
+};
+
+function next() {
+  if (index < skills.length - 1) {
+    index++;
+    loadSkill();
+  } else {
+    alert("Finished!");
+  }
+}
+
+yesBtn.onclick = next;
+noBtn.onclick = next;

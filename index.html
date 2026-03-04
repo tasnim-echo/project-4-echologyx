@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <!-- home page CONTENT -->
-      <div style="display: none" id="homeView">
+      <div id="homeView">
         <main>
           <div class="left">
             <!-- header -->
@@ -39,7 +39,7 @@
       </div>
 
       <!-- SKILL VIEW -->
-      <div id="skillView">
+      <div style="display: none" id="skillView">
         <main>
           <div class="left">
             <!-- SAME header -->
@@ -53,7 +53,7 @@
             <div class="left-content">
               <!-- Skill Logo -->
               <div class="skill-logo">
-                <img src="/assets/frontend/1.png" alt="" />
+                <img id="skill-logo" src="" alt="" />
               </div>
 
               <div class="shadow">
@@ -73,12 +73,9 @@
             </div>
 
             <div class="right-content">
-              <h2 id="skillTitle">HTML5</h2>
-              <span id="skillDesc">
-                HTML5 is a markup language used for structuring and presenting
-                content on the World Wide Web.
-              </span>
-              <p id="skillQuestion">Do you have knowledge about HTML5?</p>
+              <h2 id="skillTitle"></h2>
+              <span id="skillDesc"> </span>
+              <p id="skillQuestion"></p>
 
               <div class="buttons">
                 <button id="yesBtn">Yes</button>
@@ -94,5 +91,7 @@
         Copyright © 2022 ECHOLOGYX. All rights reserved
       </footer>
     </div>
+
+    <script src="/js/app.js"></script>
   </body>
 </html>

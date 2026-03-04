@@ -77,7 +77,7 @@ main {
   line-height: 100%;
 }
 
-.buttons button:hover {
+#homeView .buttons button:hover {
   background: #fa4b00;
   color: #fff;
 }
@@ -189,6 +189,31 @@ main {
   font-size: 20px;
   line-height: 100%;
   border: 1px solid #000000;
+}
+
+.progress-label {
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 100%;
+  color: #494949;
+  margin-bottom: 15px;
+  margin-top: 130px;
+}
+
+.progress {
+  height: 8px;
+  width: 576px;
+  background: #efefef;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #494949;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 /* ===== FOOTER ===== */
