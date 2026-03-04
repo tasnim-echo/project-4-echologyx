@@ -200,6 +200,7 @@ console.log(frontend[0].logo);
 
 const homeView = document.getElementById("homeView");
 const skillView = document.getElementById("skillView");
+const endPage = document.getElementById("endpage");
 
 // ELEMENTS
 const logo = document.getElementById("skill-logo");
@@ -267,7 +268,8 @@ function next() {
     index++;
     loadSkill();
   } else {
-    alert("Finished!");
+    skillView.style.display = "none";
+    endPage.style.display = "block";
   }
 }
 

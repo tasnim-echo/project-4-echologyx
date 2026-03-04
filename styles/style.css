@@ -216,6 +216,35 @@ main {
   transition: 0.3s;
 }
 
+/* end page */
+/* LEFT SIDE */
+.endPage-left {
+  padding-left: 135px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.endPage-left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.endPage-left-content h1 {
+  font-weight: 750;
+  font-size: 48px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.endPage-left-content p {
+  font-weight: 600;
+  font-size: 20px;
+
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 50px;
+}
 /* ===== FOOTER ===== */
 footer {
   background: #f2662e;
