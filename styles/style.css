@@ -7,14 +7,15 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
 }
 
 /*  MAIN SECTION  */
 main {
-  flex: 1;
+  /* flex: 1; */
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
 }
@@ -25,18 +26,18 @@ main {
 }
 
 /* LEFT SIDE */
-.left {
-  flex: 1;
+#homeView .left {
+  /* flex: 1; */
   padding-left: 135px;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
 }
-.left-content {
+#homeView .left-content {
   flex: 1; /* takes remaining height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* now it can center */
+  justify-content: center;
 }
 .left h1 {
   font-weight: 750;
@@ -61,7 +62,7 @@ main {
   flex-wrap: wrap;
 }
 
-.buttons button {
+#homeView .buttons button {
   width: 230px;
   height: 50px;
   border-radius: 25px;
@@ -82,7 +83,7 @@ main {
 }
 
 /* RIGHT SIDE */
-.right {
+#homeView .right {
   padding-inline: 35px;
   padding-top: 246px;
   padding-bottom: calc(246px - 60px);
@@ -92,16 +93,112 @@ main {
   justify-content: center;
 }
 
-.right img {
+#homeView .right img {
   width: 531px;
   height: auto;
 }
 
+/* skill view */
+/* LEFT SIDE */
+#skillView .left {
+  padding-left: 135px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 541px;
+  background: #f8f8f8;
+}
+#skillView .left-content {
+  flex: 1; /* takes remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-logo img {
+  width: 220px;
+  height: auto;
+}
+.shadow img {
+  width: 270px;
+  height: auto;
+}
+#skillView .right {
+  /* flex: 1; */
+}
+#skillView .right-content {
+  flex: 1; /* takes remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#skillView .left {
+  width: 541px; /* fixed */
+}
+
+#skillView .right {
+  flex: 1; /* take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 135px;
+}
+
+#skillView .right-content h2 {
+  font-weight: 750;
+  font-size: 48px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 20px;
+}
+#skillView .right-content span {
+  font-weight: 600;
+
+  font-size: 20px;
+  color: #9fa7ac;
+  margin-bottom: 80px;
+  line-height: 100%;
+}
+
+#skillView .right-content p {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+  line-height: 100%;
+  margin-bottom: 49px;
+}
+
+#skillView .right-content .buttons #yesBtn {
+  background: #000000;
+  color: #ffffff;
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 750;
+  font-size: 20px;
+  line-height: 100%;
+}
+#skillView .right-content .buttons #noBtn {
+  background: #ffffff;
+  color: #000000;
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 750;
+  font-size: 20px;
+  line-height: 100%;
+  border: 1px solid #000000;
+}
+
 /* ===== FOOTER ===== */
 footer {
-  background: #f26522;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  background: #f2662e;
+  color: #ffffff;
+  padding-block: 20px;
+  padding-left: 145px;
+  font-family: Karla;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
 }

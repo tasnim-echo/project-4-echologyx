@@ -10,31 +10,84 @@
   <body>
     <div class="container">
       <!-- home page CONTENT -->
-      <main>
-        <div class="left">
-          <!-- header -->
-          <header class="logo">
-            <img
-              src="/assets/companylogo/Echologyx-Logo 1.png"
-              alt="Echologyx"
-            />
-          </header>
-          <div class="left-content">
-            <h1>Hello and welcome.</h1>
-            <p>Before we begin, please select a type of development.</p>
+      <div style="display: none" id="homeView">
+        <main>
+          <div class="left">
+            <!-- header -->
+            <header class="logo">
+              <img
+                src="/assets/companylogo/Echologyx-Logo 1.png"
+                alt="Echologyx"
+              />
+            </header>
+            <div class="left-content">
+              <h1>Hello and welcome.</h1>
+              <p>Before we begin, please select a type of development.</p>
 
-            <div class="buttons">
-              <button>Front-end development</button>
-              <button>Back-end development</button>
-              <button>Full stack development</button>
+              <div class="buttons">
+                <button>Front-end development</button>
+                <button>Back-end development</button>
+                <button>Full stack development</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="right">
-          <img src="/assets/Coding-cuate 1.png" alt="Developer " />
-        </div>
-      </main>
+          <div class="right">
+            <img src="/assets/Coding-cuate 1.png" alt="Developer " />
+          </div>
+        </main>
+      </div>
+
+      <!-- SKILL VIEW -->
+      <div id="skillView">
+        <main>
+          <div class="left">
+            <!-- SAME header -->
+            <header class="logo">
+              <img
+                src="/assets/companylogo/Echologyx-Logo 1.png"
+                alt="Echologyx"
+              />
+            </header>
+
+            <div class="left-content">
+              <!-- Skill Logo -->
+              <div class="skill-logo">
+                <img src="/assets/frontend/1.png" alt="" />
+              </div>
+
+              <div class="shadow">
+                <img src="/assets/shadow.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <!-- Progress -->
+            <div class="progress-wrapper">
+              <p id="progressLabel" class="progress-label"></p>
+
+              <div class="progress">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="right-content">
+              <h2 id="skillTitle">HTML5</h2>
+              <span id="skillDesc">
+                HTML5 is a markup language used for structuring and presenting
+                content on the World Wide Web.
+              </span>
+              <p id="skillQuestion">Do you have knowledge about HTML5?</p>
+
+              <div class="buttons">
+                <button id="yesBtn">Yes</button>
+                <button id="noBtn">No</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
 
       <!-- footer -->
       <footer class="footer">
