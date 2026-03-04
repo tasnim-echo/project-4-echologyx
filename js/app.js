@@ -6,66 +6,77 @@ const frontend = [
     title: "HTML5",
     desc: "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
     question: "Do you have knowledge about HTML5?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/2.png",
     title: "CSS3",
     desc: "CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts",
     question: "Do you have knowledge about CSS3?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/3.png",
     title: "Bootstrap",
     desc: "Bootstrap utilizes Sass for a modular and customizable architecture. ",
     question: "Do you have knowledge about Bootstrap?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/4.png",
     title: "Javascript       ",
     desc: "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. ",
     question: "Do you have knowledge about javascript?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/5.png",
     title: "jQuery",
     desc: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation",
     question: "Do you have knowledge about jQuery?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/6.png",
     title: "ES6",
     desc: "JavaScript ES6 is the newer version of JavaScript that was introduced in 2015. ",
     question: "Do you have knowledge about ES6?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/7.png",
     title: "npm Script",
     desc: "An npm script is a convenient way to bundle common shell commands for your project.",
     question: "Do you have knowledge about npm script?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/8.png",
     title: "TypeScript",
     desc: "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. k",
     question: "Do you have knowledge about Typescript?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/9.png",
     title: "React.js",
     desc: "React is a JavaScript library developed by Facebook which, among other things, was used to build Instagram.com.",
     question: "Do you have knowledge about React.js?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/10.png",
     title: "Angular.js",
     desc: "AngularJS extends HTML with new attributes. AngularJS is perfect for Single Page Applications (SPAs).",
     question: "Do you have knowledge about Angular.js?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/11.png",
     title: "Vue.js",
     desc: "Vue.js is an open-source front end JavaScript framework for building user interfaces and single-page applications.",
     question: "Do you have knowledge about Vue.js?",
+    answer: null,
   },
 ];
 
@@ -81,42 +92,49 @@ const backend = [
     title: "Laravel",
     desc: "Laravel is a PHP web application framework with expressive, elegant syntax. ",
     question: "Do you have knowledge about Laravel?",
+    answer: null,
   },
   {
     logo: "/assets/backend/3.png",
     title: "REST APIs",
     desc: "JavaScript ES6 is the newer version of JavaScript that was introduced in 2015. ",
     question: "Do you have knowledge about REST APIs",
+    answer: null,
   },
   {
     logo: "/assets/backend/4.png",
     title: "SQL database",
     desc: "SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system",
     question: "Do you have knowledge about sql database?",
+    answer: null,
   },
   {
     logo: "/assets/backend/5.png",
     title: "C#",
     desc: "C# is a general-purpose, multi-paradigm programming language. C# encompasses static typing, functional, generic, object-oriented.",
     question: "Do you have knowledge about C#?",
+    answer: null,
   },
   {
     logo: "/assets/backend/6.png",
     title: "Ruby on rails",
     desc: "Ruby on Rails is a server-side web application, model–view–controller framework, for a database, a web service.",
     question: "Do you have knowledge about ruby on rails?",
+    answer: null,
   },
   {
     logo: "/assets/backend/7.png",
     title: "Node.js",
     desc: "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine.",
     question: "Do you have knowledge about Node.js?",
+    answer: null,
   },
   {
     logo: "/assets/backend/8.png",
     title: "Python",
     desc: "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
     question: "Do you have knowledge about Python?",
+    answer: null,
   },
 ];
 
@@ -126,24 +144,28 @@ const fullstack = [
     title: "HTML5",
     desc: "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
     question: "Do you have knowledge about HTML5?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/3.png",
     title: "Bootstrap",
     desc: "Bootstrap utilizes Sass for a modular and customizable architecture. ",
     question: "Do you have knowledge about Bootstrap?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/4.png",
     title: "Javascript       ",
     desc: "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. ",
     question: "Do you have knowledge about javascript?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/7.png",
     title: "npm Script",
     desc: "An npm script is a convenient way to bundle common shell commands for your project.",
     question: "Do you have knowledge about npm script?",
+    answer: null,
   },
 
   {
@@ -151,48 +173,56 @@ const fullstack = [
     title: "React.js",
     desc: "React is a JavaScript library developed by Facebook which, among other things, was used to build Instagram.com.",
     question: "Do you have knowledge about React.js?",
+    answer: null,
   },
   {
     logo: "/assets/frontend/11.png",
     title: "Vue.js",
     desc: "Vue.js is an open-source front end JavaScript framework for building user interfaces and single-page applications.",
     question: "Do you have knowledge about Vue.js?",
+    answer: null,
   },
   {
     logo: "/assets/backend/1.png",
     title: "PHP",
     desc: "PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages. ",
     question: "Do you have knowledge about php?",
+    answer: null,
   },
   {
     logo: "/assets/backend/3.png",
     title: "REST APIs",
     desc: "JavaScript ES6 is the newer version of JavaScript that was introduced in 2015. ",
     question: "Do you have knowledge about REST APIs",
+    answer: null,
   },
   {
     logo: "/assets/backend/5.png",
     title: "C#",
     desc: "C# is a general-purpose, multi-paradigm programming language. C# encompasses static typing, functional, generic, object-oriented.",
     question: "Do you have knowledge about C#?",
+    answer: null,
   },
   {
     logo: "/assets/backend/6.png",
     title: "Ruby on rails",
     desc: "Ruby on Rails is a server-side web application, model–view–controller framework, for a database, a web service.",
     question: "Do you have knowledge about ruby on rails?",
+    answer: null,
   },
   {
     logo: "/assets/backend/7.png",
     title: "Node.js",
     desc: "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine.",
     question: "Do you have knowledge about Node.js?",
+    answer: null,
   },
   {
     logo: "/assets/backend/8.png",
     title: "Python",
     desc: "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
     question: "Do you have knowledge about Python?",
+    answer: null,
   },
 ];
 
@@ -216,6 +246,9 @@ const progress = document.querySelector(".progress-fill");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 
+const endPageSkillLists = document.getElementById("endPage-skillLists");
+const endPageSkillTitle = document.getElementById("endPage-skillTitle");
+
 // stack buttons
 const stackButtons = document.querySelectorAll(
   "#homeView .left-content .buttons button",
@@ -231,17 +264,20 @@ stackButtons.forEach((stackBtn) => {
     if (stackBtn.textContent === "Front-end development") {
       skills = frontend;
       progressLabel.textContent = "Front-end Development";
+      endPageSkillTitle.textContent = "Front-end Development skill";
     }
     if (stackBtn.textContent === "Back-end development") {
       skills = backend;
       progressLabel.textContent = "Back-end Development";
+      endPageSkillTitle.textContent = "Back-end Development skill";
     }
     if (stackBtn.textContent === "Full stack development") {
       skills = fullstack;
       progressLabel.textContent = "Full Stack Development";
+      endPageSkillTitle.textContent = "Full-Stack Development skill";
     }
 
-    index = 0;
+    // index = 0;
 
     homeView.style.display = "none";
     skillView.style.display = "block";
@@ -263,6 +299,14 @@ loadSkill = () => {
   progress.style.width = percent + "%";
 };
 
+function showEndPage() {
+  skills.forEach((skill) => {
+    const p = document.createElement("p");
+    p.textContent = skill.title;
+    endPageSkillLists.append(p);
+  });
+}
+
 function next() {
   if (index < skills.length - 1) {
     index++;
@@ -270,8 +314,18 @@ function next() {
   } else {
     skillView.style.display = "none";
     endPage.style.display = "block";
+
+    showEndPage();
   }
 }
 
-yesBtn.onclick = next;
-noBtn.onclick = next;
+yesBtn.addEventListener("click", function () {
+  skills[index].answer = "yes";
+  console.log(skills[index].answer);
+  next();
+});
+noBtn.addEventListener("click", function () {
+  skills[index].answer = "no";
+  console.log(skills[index].answer);
+  next();
+});
