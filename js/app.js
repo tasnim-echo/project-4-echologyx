@@ -301,9 +301,23 @@ loadSkill = () => {
 
 function showEndPage() {
   skills.forEach((skill) => {
-    const p = document.createElement("p");
-    p.textContent = skill.title;
-    endPageSkillLists.append(p);
+    const div = document.createElement("div");
+    div.classList.add("skill-row");
+
+    const nameOfSkill = document.createElement("span");
+    nameOfSkill.textContent = skill.title;
+
+    const icon = document.createElement("img");
+    icon.classList.add("result-icon");
+
+    if (skill.answer === "yes") {
+      icon.src = "/assets/tic.png";
+    } else {
+      icon.src = "/assets/cross.png";
+    }
+
+    div.append(icon, nameOfSkill);
+    endPageSkillLists.append(div);
   });
 }
 

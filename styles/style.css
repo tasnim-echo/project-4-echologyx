@@ -245,6 +245,46 @@ main {
   color: #000000;
   margin-bottom: 50px;
 }
+#endPage-skillLists {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+#endPage-skillLists {
+  display: flex;
+  row-gap: 25px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 121px;
+}
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#endPage-skillLists span {
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  white-space: nowrap;
+}
+#endPage-skillLists img {
+  width: 9.3px;
+  height: 7px;
+}
+.endPage-left-content {
+  width: 509px;
+}
+.endPage-right {
+  padding-inline: 35px;
+  padding-top: 246px;
+  padding-bottom: 275px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ===== FOOTER ===== */
 footer {
   background: #f2662e;
