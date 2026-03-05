@@ -69,12 +69,10 @@ main {
   border: 1px solid #fa4b00;
   background: transparent;
   color: #fa4b00;
-
   font-weight: 750;
-
   font-size: 16px;
-
   line-height: 100%;
+  cursor: pointer;
 }
 
 #homeView .buttons button:hover {
@@ -178,6 +176,7 @@ main {
   font-weight: 750;
   font-size: 20px;
   line-height: 100%;
+  cursor: pointer;
 }
 #skillView .right-content .buttons #noBtn {
   background: #ffffff;
@@ -189,6 +188,7 @@ main {
   font-size: 20px;
   line-height: 100%;
   border: 1px solid #000000;
+  cursor: pointer;
 }
 
 .progress-label {
@@ -284,6 +284,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#back-to-home {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fa4b00;
+  text-decoration: none;
+}
+#back-to-home img {
+  height: 10px;
+  width: 10px;
 }
 /* ===== FOOTER ===== */
 footer {

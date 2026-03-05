@@ -249,6 +249,8 @@ const noBtn = document.getElementById("noBtn");
 const endPageSkillLists = document.getElementById("endPage-skillLists");
 const endPageSkillTitle = document.getElementById("endPage-skillTitle");
 
+const backToHome = document.getElementById("back-to-home");
+
 // stack buttons
 const stackButtons = document.querySelectorAll(
   "#homeView .left-content .buttons button",
@@ -332,6 +334,12 @@ function next() {
     showEndPage();
   }
 }
+
+backToHome.addEventListener("click", function () {
+  skillView.style.display = "none";
+  endPage.style.display = "none";
+  homeView.style.display = "block";
+});
 
 yesBtn.addEventListener("click", function () {
   skills[index].answer = "yes";
