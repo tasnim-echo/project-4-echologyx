@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: Avenir LT Std; */
+}
+body {
+  font-family: "Montserrat", sans-serif;
 }
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 /*  MAIN SECTION  */
@@ -22,7 +22,8 @@ main {
 
 .logo img {
   width: 357px;
-  height: 40px;
+  height: auto;
+  display: block;
 }
 
 /* LEFT SIDE */
@@ -94,6 +95,7 @@ main {
 #homeView .right img {
   width: 531px;
   height: auto;
+  display: block;
 }
 
 /* skill view */
@@ -116,10 +118,12 @@ main {
 .skill-logo img {
   width: 220px;
   height: auto;
+  display: block;
 }
 .shadow img {
   width: 270px;
   height: auto;
+  display: block;
 }
 #skillView .right {
   /* flex: 1; */
@@ -229,6 +233,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 80%; /*for wrapping the skill lists to match with figma*/
 }
 .endPage-left-content h1 {
   font-weight: 750;
@@ -240,7 +245,6 @@ main {
 .endPage-left-content p {
   font-weight: 600;
   font-size: 20px;
-
   line-height: 100%;
   color: #000000;
   margin-bottom: 50px;
@@ -273,9 +277,9 @@ main {
   width: 9.3px;
   height: 7px;
 }
-.endPage-left-content {
+/* .endPage-left-content {
   width: 509px;
-}
+} */
 .endPage-right {
   padding-inline: 35px;
   padding-top: 246px;
@@ -284,6 +288,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.endPage-right img {
+  width: 444px;
+  height: auto;
+  display: block;
 }
 #back-to-home {
   font-weight: 600;
@@ -306,4 +315,102 @@ footer {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    /* min-height: auto; */
+  }
+  #homeView .left,
+  #skillView .left,
+  .endPage-left {
+    padding: 20px;
+    width: 100%;
+  }
+  #homeView .right {
+    padding-block: 80px;
+  }
+
+  #homeView .right img {
+    width: 400px;
+    height: auto;
+  }
+
+  #skillView .right {
+    padding: 20px;
+  }
+  .endPage-right {
+    padding-block: 80px;
+  }
+  .endPage-right img {
+    width: 400px;
+    height: auto;
+  }
+  .left-content,
+  .right-content,
+  .endPage-left-content {
+    text-align: center;
+    align-items: center;
+  }
+  .left h1,
+  #skillView .right-content h2,
+  .endPage-left-content h1 {
+    font-size: 32px;
+  }
+  .left p,
+  #skillView .right-content p,
+  #skillView .right-content span,
+  .endPage-left-content p {
+    font-size: 16px;
+    line-height: 1.4rem;
+  }
+  .buttons {
+    justify-content: center;
+    max-width: 100%;
+  }
+  .buttons button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Logo */
+  .logo img {
+    width: 220px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  /* Progress bar */
+  .progress-label {
+    text-align: center;
+  }
+  .progress {
+    width: 100%;
+  }
+
+  /* End page skills */
+  .endPage-left-content {
+    margin: 0 auto;
+  }
+  #endPage-skillLists {
+    justify-content: center;
+  }
+  #skillView .left-content {
+    min-height: 400px;
+  }
+  /* for stopping jump */
+  #skillView .skill-logo img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 15px;
+    text-align: center;
+  }
 }
