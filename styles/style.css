@@ -318,7 +318,7 @@ footer {
 
 /* for 1440px */
 @media (max-width: 1440px) {
-  .container {
+  .container:not:nth-child(2) {
     max-width: 1305px;
     margin: 0 0 0 auto;
     width: 100%;

@@ -9,8 +9,6 @@ function saveState() {
   localStorage.setItem("echologyx_state", JSON.stringify(state));
 }
 
-function loadState() {}
-
 // DATA
 const frontend = [
   {
@@ -269,6 +267,8 @@ const stackButtons = document.querySelectorAll(
 );
 
 let skills = [];
+let currentView = "home";
+let currentStack = null;
 let index = 0;
 
 stackButtons.forEach((stackBtn) => {
@@ -277,28 +277,65 @@ stackButtons.forEach((stackBtn) => {
     console.log(stackBtn.textContent);
     if (stackBtn.textContent === "Front-end development") {
       skills = frontend;
+      currentStack = "frontend";
       progressLabel.textContent = "Front-end Development";
       endPageSkillTitle.textContent = "Front-end Development skill";
     }
     if (stackBtn.textContent === "Back-end development") {
       skills = backend;
+      currentStack = "backend";
       progressLabel.textContent = "Back-end Development";
       endPageSkillTitle.textContent = "Back-end Development skill";
     }
     if (stackBtn.textContent === "Full stack development") {
       skills = fullstack;
+      currentStack = "fullstack";
       progressLabel.textContent = "Full Stack Development";
       endPageSkillTitle.textContent = "Full-Stack Development skill";
     }
 
-    index = 0;
+    index = 0; /*this is to start from index 0 every time i choose different stack otherwise it doesnt start from index 0*/
+    currentView = "skill";
 
     homeView.style.display = "none";
     skillView.style.display = "block";
+    endPage.style.display = "none";
 
+    saveState();
     loadSkill();
   });
 });
+
+function loadState() {
+  const data = localStorage.getItem("echologyx_state");
+
+  if (!data) return null;
+
+  const state = JSON.parse(data);
+
+  currentView = state.view;
+  currentStack = state.stack;
+  index = state.index;
+  skills = state.skills;
+
+  homeView.style.display = "none";
+  skillView.style.display = "none";
+  endPage.style.display = "none";
+
+  if (currentView === "home") {
+    homeView.style.display = "block";
+  }
+
+  if (currentView === "skill") {
+    skillView.style.display = "block";
+    loadSkill();
+  }
+
+  if (currentView === "end") {
+    endPage.style.display = "block";
+    showEndPage();
+  }
+}
 
 loadSkill = () => {
   const skill = skills[index];
@@ -338,28 +375,41 @@ function showEndPage() {
 function next() {
   if (index < skills.length - 1) {
     index++;
+    saveState();
     loadSkill();
   } else {
+    currentView = "end";
+
     skillView.style.display = "none";
     endPage.style.display = "block";
 
+    saveState();
     showEndPage();
   }
 }
 
 backToHome.addEventListener("click", function () {
+  localStorage.removeItem("echologyx_state");
+
+  currentView = "home";
+  currentStack = null;
+  skills = [];
+  index = 0;
+
   skillView.style.display = "none";
   endPage.style.display = "none";
   homeView.style.display = "block";
 });
-
 yesBtn.addEventListener("click", function () {
   skills[index].answer = "yes";
+  saveState();
   console.log(skills[index].answer);
   next();
 });
 noBtn.addEventListener("click", function () {
   skills[index].answer = "no";
+  saveState();
   console.log(skills[index].answer);
   next();
 });
+loadState();
