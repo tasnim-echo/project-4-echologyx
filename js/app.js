@@ -21,11 +21,11 @@ function loadState() {
   index = state.index;
 
   if (currentStack) {
-    setStack(currentStack); // load correct stack first
+    setStack(currentStack);
   }
 
   if (state.skills) {
-    skills = state.skills; // then restore answers
+    skills = state.skills;
   }
 
   homeView.style.display = "none";
