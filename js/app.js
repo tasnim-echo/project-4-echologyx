@@ -1,5 +1,17 @@
-// DATA
+function saveState() {
+  const state = {
+    view: currentView,
+    stack: currentStack,
+    index,
+    skills,
+  };
 
+  localStorage.setItem("echologyx_state", JSON.stringify(state));
+}
+
+function loadState() {}
+
+// DATA
 const frontend = [
   {
     logo: "/assets/frontend/1.png",
@@ -279,7 +291,7 @@ stackButtons.forEach((stackBtn) => {
       endPageSkillTitle.textContent = "Full-Stack Development skill";
     }
 
-    // index = 0;
+    index = 0;
 
     homeView.style.display = "none";
     skillView.style.display = "block";
