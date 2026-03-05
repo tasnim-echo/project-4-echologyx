@@ -9,6 +9,44 @@ function saveState() {
   localStorage.setItem("echologyx_state", JSON.stringify(state));
 }
 
+function loadState() {
+  const data = localStorage.getItem("echologyx_state");
+
+  if (!data) return null;
+
+  const state = JSON.parse(data);
+
+  currentView = state.view;
+  currentStack = state.stack;
+  index = state.index;
+
+  if (currentStack) {
+    setStack(currentStack); // load correct stack first
+  }
+
+  if (state.skills) {
+    skills = state.skills; // then restore answers
+  }
+
+  homeView.style.display = "none";
+  skillView.style.display = "none";
+  endPage.style.display = "none";
+
+  if (currentView === "home") {
+    homeView.style.display = "block";
+  }
+
+  if (currentView === "skill") {
+    skillView.style.display = "block";
+    loadSkill();
+  }
+
+  if (currentView === "end") {
+    endPage.style.display = "block";
+    showEndPage();
+  }
+}
+
 // DATA
 const frontend = [
   {
@@ -271,27 +309,44 @@ let currentView = "home";
 let currentStack = null;
 let index = 0;
 
+function setStack(stack) {
+  currentStack = stack;
+
+  if (stack === "frontend") {
+    skills = frontend;
+
+    progressLabel.textContent = "Front-end Development";
+    endPageSkillTitle.textContent = "Front end Development skill";
+  }
+  if (stack === "backend") {
+    skills = backend;
+
+    progressLabel.textContent = "Back-end Development";
+    endPageSkillTitle.textContent = "Back end Development skill";
+  }
+  if (stack === "fullstack") {
+    skills = fullstack;
+
+    progressLabel.textContent = "Full-Stack Development Development";
+    endPageSkillTitle.textContent = "Full   Stack DevelopmentDevelopment skill";
+  }
+}
+
 stackButtons.forEach((stackBtn) => {
   //   console.log(stackBtn);
   stackBtn.addEventListener("click", function () {
     console.log(stackBtn.textContent);
+
     if (stackBtn.textContent === "Front-end development") {
-      skills = frontend;
-      currentStack = "frontend";
-      progressLabel.textContent = "Front-end Development";
-      endPageSkillTitle.textContent = "Front-end Development skill";
+      setStack("frontend");
     }
+
     if (stackBtn.textContent === "Back-end development") {
-      skills = backend;
-      currentStack = "backend";
-      progressLabel.textContent = "Back-end Development";
-      endPageSkillTitle.textContent = "Back-end Development skill";
+      setStack("backend");
     }
+
     if (stackBtn.textContent === "Full stack development") {
-      skills = fullstack;
-      currentStack = "fullstack";
-      progressLabel.textContent = "Full Stack Development";
-      endPageSkillTitle.textContent = "Full-Stack Development skill";
+      setStack("fullstack");
     }
 
     index = 0; /*this is to start from index 0 every time i choose different stack otherwise it doesnt start from index 0*/
@@ -305,37 +360,6 @@ stackButtons.forEach((stackBtn) => {
     loadSkill();
   });
 });
-
-function loadState() {
-  const data = localStorage.getItem("echologyx_state");
-
-  if (!data) return null;
-
-  const state = JSON.parse(data);
-
-  currentView = state.view;
-  currentStack = state.stack;
-  index = state.index;
-  skills = state.skills;
-
-  homeView.style.display = "none";
-  skillView.style.display = "none";
-  endPage.style.display = "none";
-
-  if (currentView === "home") {
-    homeView.style.display = "block";
-  }
-
-  if (currentView === "skill") {
-    skillView.style.display = "block";
-    loadSkill();
-  }
-
-  if (currentView === "end") {
-    endPage.style.display = "block";
-    showEndPage();
-  }
-}
 
 loadSkill = () => {
   const skill = skills[index];
@@ -351,6 +375,7 @@ loadSkill = () => {
 };
 
 function showEndPage() {
+  endPageSkillLists.innerHTML = "";
   skills.forEach((skill) => {
     const div = document.createElement("div");
     div.classList.add("skill-row");

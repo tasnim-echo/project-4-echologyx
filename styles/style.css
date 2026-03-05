@@ -410,10 +410,14 @@ footer {
     min-height: 400px;
   }
   /* for stopping jump */
+  .skill-logo {
+    height: 100%;
+    margin-bottom: 12px;
+  }
   #skillView .skill-logo img {
     width: 180px;
-    height: auto;
-    margin-bottom: 12px;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* Footer */
