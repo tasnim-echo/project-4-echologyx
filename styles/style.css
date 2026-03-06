@@ -309,13 +309,18 @@ footer {
   background: #f2662e;
   color: #ffffff;
   padding-block: 20px;
-  padding-left: 135px;
+  /* padding-left: 135px; */
   font-family: Karla;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
 }
 
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding-left: 135px; */
+}
 /* for 1440px */
 @media (max-width: 1440px) {
   .container {
@@ -327,6 +332,9 @@ footer {
     max-width: 1305px;
     margin: 0 0 0 0;
     width: 100%;
+  }
+  .footer-inner {
+    padding-left: 135px;
   }
 }
 
