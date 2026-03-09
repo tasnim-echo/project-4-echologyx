@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <div>
+    <div data-main="home-view" class="main-container">
       <!-- home page CONTENT -->
       <div class="container" id="homeView">
         <main>
@@ -30,9 +30,9 @@
               <p>Before we begin, please select a type of development.</p>
 
               <div class="buttons">
-                <button>Front-end development</button>
-                <button>Back-end development</button>
-                <button>Full stack development</button>
+                <button data-skill="frontend">Front-end development</button>
+                <button data-skill="backend">Back-end development</button>
+                <button data-skill="fullstack">Full stack development</button>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
       </div>
 
       <!-- SKILL VIEW -->
-      <div class="container" style="display: none" id="skillView">
+      <div class="container" id="skillView">
         <main>
           <div class="left">
             <!-- SAME header -->
@@ -92,7 +92,7 @@
       </div>
 
       <!-- end page -->
-      <div class="container" style="display: none" id="endpage">
+      <div class="container" id="endpage">
         <main>
           <div class="endPage-left">
             <!-- header -->

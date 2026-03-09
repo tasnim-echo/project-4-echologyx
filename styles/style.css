@@ -6,6 +6,16 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+/* global */
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -438,4 +448,26 @@ footer {
     padding: 15px;
     text-align: center;
   }
+}
+
+#homeView,
+#skillView,
+#endpage {
+  display: none;
+}
+
+div[data-main="home-view"] #homeView {
+  display: block;
+}
+div[data-main="frontend"] #skillView {
+  display: block;
+}
+div[data-main="backend"] #skillView {
+  display: block;
+}
+div[data-main="fullstack"] #skillView {
+  display: block;
+}
+div[data-main="endpage"] #endpage {
+  display: block;
 }
