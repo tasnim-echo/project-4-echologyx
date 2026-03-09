@@ -425,16 +425,18 @@ backToHome.addEventListener("click", function () {
   endPage.style.display = "none";
   homeView.style.display = "block";
 });
-yesBtn.addEventListener("click", function () {
-  skills[index].answer = "yes";
+
+function handleAnswer(answer) {
+  skills[index].answer = answer;
   saveState();
   console.log(skills[index].answer);
   next();
+}
+
+yesBtn.addEventListener("click", function () {
+  handleAnswer("yes");
 });
 noBtn.addEventListener("click", function () {
-  skills[index].answer = "no";
-  saveState();
-  console.log(skills[index].answer);
-  next();
+  handleAnswer("no");
 });
 loadState();
